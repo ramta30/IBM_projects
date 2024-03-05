@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Event Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="eventCalendarApp" ng-controller="EventCalendarController">
+    <!-- Your event calendar content will go here -->
+    <!-- Inside the <body> -->
+<div class="calendar">
+    <div class="day" ng-repeat="day in days">
+        <div class="header">{{ day }}</div>
+        <div class="events">
+            <div class="event" ng-repeat="event in events" ng-if="event.date === day">{{ event.title }}</div>
+        </div>
+        <div class="add-event">
+            <input type="text" ng-model="newEvent.title" placeholder="Event Title">
+            <input type="date" ng-model="newEvent.date">
+            <button ng-click="addEvent(newEvent.date, newEvent.title)">Add Event</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<!-- Inside the <body> -->

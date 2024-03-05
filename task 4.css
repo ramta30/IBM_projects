@@ -1,0 +1,44 @@
+/* styles.css */
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    flex: 1;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+}
+
+.events {
+    padding: 5px;
+}
+
+.event {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.add-event {
+    padding: 5px;
+}
+
+.add-event input {
+    margin-bottom: 5px;
+}
+
+.add-event button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
