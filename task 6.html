@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="quizApp">
+
+<head>
+    <title>Interactive Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div ng-controller="QuizController" class="quiz-container">
+        <h1>{{ quiz.title }}</h1>
+        <div ng-if="!quizFinished">
+            <div ng-if="currentQuestion">
+                <h2>Question {{ currentQuestionIndex + 1 }}:</h2>
+                <p>{{ currentQuestion.question }}</p>
+                <ul>
+                    <li ng-repeat="option in currentQuestion.options">
+                        <label>
+                            <input type="radio" ng-model="selectedOption" ng-value="option">
+                            {{ option }}
+                        </label>
+                    </li>
+                </ul>
+                <button ng-click="nextQuestion()">Next</button>
+            </div>
+            <div ng-if="quizFinished">
+                <h2>Quiz Finished!</h2>
+                <p>Your score: {{ score }}</p>
+                <button ng-click="resetQuiz()">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
