@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-time Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="weatherApp" ng-controller="WeatherController">
+    <!-- Your weather app content will go here -->
+</body>
+</html>
+<!-- Inside the <body> -->
+<div class="container">
+    <h1>Real-time Weather App</h1>
+    <input type="text" placeholder="Enter city" ng-model="city">
+    <button ng-click="getWeather(city)">Get Weather</button>
+
+    <div class="weather-info" ng-if="weatherData">
+        <h2>{{weatherData.name}}, {{weatherData.sys.country}}</h2>
+        <p>Temperature: {{weatherData.main.temp}}°C</p>
+        <p>Weather: {{weatherData.weather[0].description}}</p>
+        <img src="http://openweathermap.org/img/wn/{{weatherData.weather[0].icon}}.png" alt="Weather Icon">
+    </div>
+</div>
