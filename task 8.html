@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+
+<head>
+    <title>Animated To-Do List</title>
+    <link rel="stylesheet" href="task 8.css">
+</head>
+
+<body>
+    <div ng-controller="TodoController" class="todo-container">
+        <h1>To-Do List</h1>
+        <input type="text" ng-model="newTask" placeholder="Add a new task">
+        <button ng-click="addTask()">Add</button>
+        <ul class="task-list">
+            <li ng-repeat="task in tasks" ng-animate="'animate'" class="task">
+                <span>{{ task }}</span>
+                <button ng-click="removeTask($index)">Remove</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="task 8.js"></script>
+</body>
+
+</html>

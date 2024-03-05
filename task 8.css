@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.todo-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.task button {
+    float: right;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.task button:hover {
+    background-color: #c82333;
+}
+
+.ng-enter, .ng-leave {
+    transition: all 0.5s ease;
+}
+
+.ng-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.ng-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ng-leave {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ng-leave-active {
+    opacity: 0;
+    transform: translateY(-20px);
+}
