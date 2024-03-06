@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chatApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-time Chat</title>
+    <link rel="stylesheet" href="task 8.css">
+</head>
+<body ng-controller="ChatController">
+    <div class="chat-container">
+        <div class="chat-messages">
+            <div ng-repeat="message in messages track by $index">
+                <span>{{ message.user }}:</span>
+                <span>{{ message.text }}</span>
+            </div>
+        </div>
+        <input type="text" placeholder="Type your message..." ng-model="newMessage" ng-keypress="sendMessage($event)">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="task 9.js"></script>
+</body>
+</html>
