@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="analyticsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Analytics</title>
+    <link rel="stylesheet" href="task 10.css">
+</head>
+<body ng-controller="AnalyticsController">
+    <div class="dashboard">
+        <div class="chart">
+            <canvas id="lineChart" width="400" height="200"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="barChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="task 10.js"></script>
+</body>
+</html>

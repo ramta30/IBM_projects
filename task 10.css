@@ -1,0 +1,10 @@
+/* styles.css */
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.chart {
+    width: 45%;
+}
